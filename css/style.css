@@ -1,0 +1,80 @@
+html {
+  font-size: 62.5%; }
+
+body {
+  color: #0065b2;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: #fdfdfb; }
+
+header .image {
+  background-image: url(../images/oil.jpg);
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: bottom center; }
+
+#product h2 {
+  text-align: center;
+  margin-top: 50px; }
+#product .container {
+  margin: 0 20px;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+#product .box {
+  -webkit-flex: 1;
+  flex: 1;
+  margin: 10px 0;
+  padding: 0;
+  background-color: #0065b2; }
+#product .title-box {
+  padding: 5px 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  color: #0065b2;
+  background-color: #b8c2c8; }
+#product .text-box {
+  padding: 8px;
+  color: #fdfdfb; }
+
+#contact {
+  background-color: #b8c2c8;
+  margin-top: 30px;
+  padding-bottom: 30px; }
+  #contact h3 {
+    color: #0065b2;
+    text-align: center;
+    padding-top: 20px; }
+  #contact .button {
+    margin: auto;
+    text-align: center;
+    width: 200px;
+    display: block;
+    color: #fdfdfb;
+    background-color: #0065b2;
+    font-weight: bold;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; }
+
+@media (min-width: 769px) {
+  header .image {
+    height: 500px;
+    width: 100%; }
+
+  #product .container {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between; }
+  #product .box {
+    margin: 0 10px; }
+
+  #contact .button a:hover {
+    background-color: #00487f; } }
+
+/*# sourceMappingURL=style.css.map */

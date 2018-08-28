@@ -1,0 +1,108 @@
+@import "compass";
+
+// colors
+$baseColor: #fdfdfb;
+$subColor: #b8c2c8;
+$keyColor: #0065b2;
+$fontColor: #0065b2;
+
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  line-height:1.6;
+  letter-spacing: 0.1em;
+  background-color: $baseColor;
+}
+
+header {
+    .image {
+  background-image: url(../images/oil.jpg);
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: bottom center;
+    }
+}
+
+#product {
+    h2 {
+        text-align: center;
+        margin-top: 50px;
+    }
+    .container {
+    margin: 0 20px;
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column);
+    }
+        .box {
+            @include flex(1);
+            margin: 10px 0;
+            padding: 0;
+            background-color: $keyColor;
+        }
+            .title-box {
+                padding: 5px 0;
+                font-size: 1.8rem;
+                font-weight: bold;
+                text-align: center;
+                color: $keyColor;
+                background-color: $subColor;
+        }
+            .text-box {
+                padding: 8px;
+                color: $baseColor;    
+            }
+}
+
+#contact {
+    background-color: $subColor;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    h3 {
+        color: $keyColor;
+        text-align: center;
+        padding-top: 20px;
+    }
+    .button {
+        margin: auto;
+        text-align: center;
+        width: 200px;
+        display: block;
+        color: $baseColor;
+        background-color: $keyColor;
+        font-weight: bold;
+        @include border-radius(3px);
+    }    
+}
+
+
+// PC
+@media (min-width: 769px) {
+    header {
+        .image {
+          height: 500px;
+          width: 100%;
+        }
+    }
+    #product {
+        .container {
+          @include flex-direction(row);
+          justify-content: space-between;
+            }
+        .box {
+            margin: 0 10px;
+        }
+    }
+    #contact {
+        .button {
+            a {
+                &:hover {
+                    background-color: darken($keyColor, 10%);
+                }
+            }
+        }
+    }
+}
